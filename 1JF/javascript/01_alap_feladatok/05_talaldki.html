@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Találd ki</title>
+</head>
+<body>
+    <script>
+        // kell egy véletlen szám
+        // Math.random() - véletlenszám generátor
+        // kell egy véletlenszám 1 és 10 között
+
+        const random =Math.floor(Math.random()*10) + 1;
+        console.log('A gép tippje: ',random);
+        let number;
+        //console.log(Math.floor(Math.random()*10)+1);
+
+        do {
+            // kérjünk be egy számot
+            number = parseInt(prompt('A tipped 1 és 10 között:'));
+            if (number !== random) {
+                // igaz ág
+                if (number < random){
+                    // igáz ág
+                    console.log('Túl kicsi!');
+                } else {
+                    // hamis ág
+                    console.log('Túl nagy!');
+                }
+            }
+        } while(number !== random);  
+        // == -> összehesonlítás értékre 
+        // === -> összehesonlítás értékre és típusra is
+        // != -> összehesonlítás értékre 
+        // !== -> összehesonlítás értékre és típusra is
+
+        console.log('Eltaláltad!');
+    </script>
+</body>
+</html>

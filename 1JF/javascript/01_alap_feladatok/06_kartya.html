@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kártya</title>
+</head>
+<body>
+    <script>
+        const sorozatok = ['Pikk','Treff','Káró','Kőr'];
+        //                   0       1      2      3
+        // sorozatok.length -> 4
+        const lapok = ['Ász','2','3','4','5','6','7','8','9','10','Bubi','Dáma','Király'];
+
+        let pakli = [];
+
+        for (let i = 0; i < sorozatok.length; i++) {
+            for (let j = 0; j < lapok.length; j++) {
+                //console.log(i,sorozatok[i],j,lapok[j]);
+                let kartya = {
+                    Sorozat : sorozatok[i],
+                    Lap : lapok[j]
+                };
+                pakli.push(kartya); // .push() bővíti a tömböt a végén
+            }
+        }
+        //console.log(pakli);
+
+        for (let i = pakli.length-1; i > 0; i--) {
+            let random = Math.floor(Math.random()*i)
+            let temp = pakli[i];
+            pakli[i] = pakli[random];
+            pakli[random] = temp;
+        }
+        // console.log(pakli);
+
+        for (let i = 0; i < 5; i++) {
+            console.log(`${pakli[i].Sorozat} - ${pakli[i].Lap}`);
+        }
+       
+       
+    </script>
+</body>
+</html>

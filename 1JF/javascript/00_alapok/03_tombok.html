@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tömbök</title>
+</head>
+<body>
+    <script>
+        // tömb lértehozása
+        // let tomb1 = [];
+        // let tomb2 = new array();
+
+        let gyumolcsok = ['Barack','Körte','Szilva'];
+        //                   0        1       2
+        console.log(gyumolcsok[0]);
+        console.log(gyumolcsok[1]);
+        console.log(gyumolcsok[2]);
+        console.log(gyumolcsok[3]);
+
+        gyumolcsok[3]='Alma';
+        console.log(gyumolcsok[3]);
+
+        gyumolcsok[0]='Meggy';
+        console.log(gyumolcsok[0]);
+
+        console.log('gyumolcsok tömb:',gyumolcsok);
+        console.log('a tömb hossza:',gyumolcsok.length);
+
+        let szamok=[];
+        for(let i=10; i<=20; i++){
+            szamok.push(i); // .push() bővíti a tömböt a végénél
+        }
+        console.log('szamok:',szamok);
+
+        gyumolcsok.push('Dió');
+        console.log(gyumolcsok);
+        gyumolcsok.push(100);
+        console.log(gyumolcsok);
+        gyumolcsok.push(true);
+        console.log(gyumolcsok);
+
+        gyumolcsok.pop(); // eltávolítja az utolsó elemet
+        console.log(gyumolcsok);
+
+        gyumolcsok.unshift('Banán'); // elején bővíti a tömböt.
+        console.log(gyumolcsok);
+
+        gyumolcsok.shift();  // eltávolítja az első elemet
+        console.log(gyumolcsok);
+        
+        // let nevek =[];
+        // let nev;
+        // while( nev != '' ){
+        //    nev = prompt('Kérek egy nevet:','') ;
+        //    nevek.push(nev);
+        // }
+        // console.log('nevek:',nevek);
+
+        for(let i = 0 ;i < gyumolcsok.length; i++){
+            console.log(`Index: ${i}, Érték: ${gyumolcsok[i]}`);
+        }
+        console.log('-------------------');
+        gyumolcsok.forEach( (egyGyumolcs,index) => 
+                console.log(`Index: ${index}, Érték: ${egyGyumolcs}`) );
+
+        console.log('-------------------');
+        // () => {}   arrow function  / nyíl függvény
+        gyumolcsok.forEach( (egyGyumolcs) => 
+                console.log(`Érték: ${egyGyumolcs}`) );
+        
+    </script>
+</body>
+</html>

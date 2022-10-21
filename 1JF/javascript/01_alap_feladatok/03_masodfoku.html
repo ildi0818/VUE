@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Másodfokú egyenlet</title>
+</head>
+<body>
+    <script>
+        // 1 6 5
+        // 1 -6 9
+        // 1 -3 10
+
+        let gyok1, gyok2;
+
+        let a = Number(prompt('A:'));
+        let b = Number(prompt('B:'));
+        let c = Number(prompt('C:'));
+
+        let d = (b*b) - (4*a*c);
+
+        if (d > 0) {
+            // igaz ág
+            gyok1 = (-b + Math.sqrt(d)) / (2*a);
+            gyok2 = (-b - Math.sqrt(d)) / (2*a);
+            console.log('gyök1: ',gyok1);
+            console.log('gyök2: ',gyok2);
+        } else {
+            // hamis ág 
+            if ( d == 0 )  {
+                gyok1 = gyok2 = -b / (2*a);
+                console.log('gyök1=gyök2:', gyok1);
+            } else {
+                console.log('Nincs megoldás.');
+            }
+        }
+
+    </script>
+</body>
+</html>

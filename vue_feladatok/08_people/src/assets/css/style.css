@@ -1,0 +1,22 @@
+.bg-image {
+    height: 500px;
+    background: url('~@/assets/img/people2.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.nyito-oldal {
+    min-height: 30vh;
+}
+
+.border50{
+    border-radius: 50%;
+}
+
+.border5 {
+    border-radius: 5%;
+}
+
+.card-click:hover {
+    box-shadow: none !important;
+}
